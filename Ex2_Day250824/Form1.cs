@@ -1,3 +1,5 @@
+using Ex2_Day250824.Help;
+
 namespace Ex2_Day250824
 {
     public partial class Form1 : Form
@@ -19,9 +21,12 @@ namespace Ex2_Day250824
             double y1 = Convert.ToDouble(Input_y1.Text);
             double y2 = Convert.ToDouble(Input_y2.Text);
 
-            String temp = $"x1: {x1}, y1: {y1}\nx2: {x2}, y2: {y2}";
+            //String temp = $"x1: {x1}, y1: {y1}\nx2: {x2}, y2: {y2}";
+            //MessageBox.Show(temp);
 
-            MessageBox.Show(temp);
+            r_hesogoc.Text = help.Angle(x1, y1, x2, y2).ToString();
+            r_khoangcach.Text = help.Distance(x1, y1, x2, y2).ToString();
+
         }
     }
 }
