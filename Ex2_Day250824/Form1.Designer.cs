@@ -193,7 +193,6 @@
             label6.Size = new Size(76, 15);
             label6.TabIndex = 8;
             label6.Text = "Khoang cach";
-            label6.Click += this.label6_Click;
             // 
             // btnTinhToan
             // 
