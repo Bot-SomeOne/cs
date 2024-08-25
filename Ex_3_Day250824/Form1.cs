@@ -1,3 +1,7 @@
+﻿
+using System.Security.Cryptography;
+using System.Windows.Forms;
+
 namespace Ex_3_Day250824
 {
     public partial class Form1 : Form
@@ -10,9 +14,59 @@ namespace Ex_3_Day250824
             InitializeComponent();
             this.check = true;
             this.clear();
+
+            // Lang nghe su kien ban phim
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+            this.KeyPreview = true;
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt && e.KeyCode == Keys.G)
+            {
+                this.giaiPt();
+            } 
+            else if (e.Alt && e.KeyCode == Keys.L)
+            {
+                this.clear();
+            } else if (e.Alt && e.KeyCode == Keys.T)
+            {
+                this.exitApp();
+            }
+
         }
 
         private void btn_giaiPT_Click(object sender, EventArgs e)
+        {
+            this.giaiPt();
+        }
+
+        private void button_LamLai_Click(object sender, EventArgs e)
+        {
+            this.clear();
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.exitApp();
+        }
+
+        // Help exit
+        private void exitApp()
+        {
+            // Display a confirmation dialog
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?",
+                                                  "Xác nhận thoát",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        // Help funtion giai pt
+        private void giaiPt()
         {
             double a, b, c;
 
@@ -43,16 +97,6 @@ namespace Ex_3_Day250824
             }
         }
 
-        private void button_LamLai_Click(object sender, EventArgs e)
-        {
-            this.clear();
-        }
-
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         // Help function get value
         private double getValue(TextBox t)
         {
@@ -74,6 +118,8 @@ namespace Ex_3_Day250824
             ip_b.Text = "";
             ip_c.Text = "";
             ip_res.Text = "";
+
+            ip_a.Focus();
         }
     }
 }
