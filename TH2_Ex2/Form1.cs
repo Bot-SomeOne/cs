@@ -112,6 +112,8 @@ namespace TH2_Ex2
         {
             this.KeyPreview = true;
 
+            radioCaNgay.Checked = true;
+
             List<int> listSoLuong = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             comboBoxSoLuong.DataSource = listSoLuong;
 
