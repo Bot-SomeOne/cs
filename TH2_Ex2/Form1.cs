@@ -66,10 +66,10 @@ namespace TH2_Ex2
             txtTien.Text = tien.ToString();
         }
 
-            /**
-             *  Handle btnThemMoi_Click
-             */
-            private void btnThemMoi_Click(object sender, EventArgs e)
+         /**
+          *  Handle btnThemMoi_Click
+          */
+        private void btnThemMoi_Click(object sender, EventArgs e)
         {
             this.clearUp();
         }
@@ -105,6 +105,8 @@ namespace TH2_Ex2
 
             comboBoxChonDoUong.SelectedIndex = 0;
             comboBoxSoLuong.SelectedIndex = 0;
+
+            radioCaNgay.Checked = true;
         }
 
         // Help Init
