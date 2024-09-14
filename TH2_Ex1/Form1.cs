@@ -16,6 +16,7 @@ namespace TH2_Ex1
     {
         // Var
         private List<MonHoc> lstMonHoc;
+        private List<MonHoc> lstData;
         //
         public Form1()
         {
@@ -67,12 +68,63 @@ namespace TH2_Ex1
         }
 
         /**
+         * Handle click add to list MonHoc
+         */
+        private void btnThemVaoDS_Click(object sender, EventArgs e)
+        {
+            this.helpAddData();
+        }
+
+        /**
          * List Helpper
          */
 
+        /**
+         * Help add data
+         */
+        private void helpAddData()
+        {
+            MonHoc selectedMonHoc = (MonHoc)cbbTenMonHoc.SelectedItem;
+            if (selectedMonHoc == null || txtDiem.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập điểm cho môn học", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            double diem = double.Parse(txtDiem.Text);
+            if (diem < 0 || diem > 10)
+            {
+                MessageBox.Show("Điểm phải nằm trong khoảng từ 0 đến 10", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            selectedMonHoc.Diem = diem;
+            this.lstData.Add(new MonHoc
+            {
+                TenMonHoc = selectedMonHoc.TenMonHoc,
+                SoTinChi = selectedMonHoc.SoTinChi,
+                Diem = selectedMonHoc.Diem
+            });
+            this.HandleShowData();
+        }
+
+        /**
+         * Handle show data
+         */
+        private void HandleShowData()
+        {
+            string data = "";
+            foreach (MonHoc monHoc in this.lstData)
+            {
+                data += monHoc.TenMonHoc + " " + monHoc.SoTinChi + " - " + monHoc.Diem + Environment.NewLine;
+            }
+            txtDSMH.Text = data;
+        }
+
         // Init
         private void init()
-        {
+        {   
+            txtDSMH.ScrollBars = ScrollBars.Both; // Hoặc ScrollBars.Vertical hoặc ScrollBars.Horizontal
+
+            this.lstData = new List<MonHoc>();
             this.lstMonHoc = new List<MonHoc>
             {
                 new MonHoc{
@@ -112,6 +164,5 @@ namespace TH2_Ex1
             }
         }
 
-        
     }
 }

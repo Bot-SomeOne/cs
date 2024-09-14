@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtDSMH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnTinh = new System.Windows.Forms.Button();
             this.txtTongSoDiem = new System.Windows.Forms.TextBox();
+            this.txtDSMH = new System.Windows.Forms.TextBox();
             this.txtTenMonHoc.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,7 @@
             this.btnThemVaoDS.TabIndex = 3;
             this.btnThemVaoDS.Text = "Them vao DS";
             this.btnThemVaoDS.UseVisualStyleBackColor = true;
+            this.btnThemVaoDS.Click += new System.EventHandler(this.btnThemVaoDS_Click);
             // 
             // txtDiem
             // 
@@ -136,14 +137,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sach cac mon hoc";
-            // 
-            // txtDSMH
-            // 
-            this.txtDSMH.Location = new System.Drawing.Point(11, 27);
-            this.txtDSMH.Multiline = true;
-            this.txtDSMH.Name = "txtDSMH";
-            this.txtDSMH.Size = new System.Drawing.Size(481, 271);
-            this.txtDSMH.TabIndex = 0;
             // 
             // label4
             // 
@@ -213,6 +206,14 @@
             this.txtTongSoDiem.Size = new System.Drawing.Size(100, 26);
             this.txtTongSoDiem.TabIndex = 3;
             // 
+            // txtDSMH
+            // 
+            this.txtDSMH.Location = new System.Drawing.Point(18, 25);
+            this.txtDSMH.Multiline = true;
+            this.txtDSMH.Name = "txtDSMH";
+            this.txtDSMH.Size = new System.Drawing.Size(469, 267);
+            this.txtDSMH.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -255,13 +256,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDiem;
         private System.Windows.Forms.Button btnThemVaoDS;
-        private System.Windows.Forms.TextBox txtDSMH;
         private System.Windows.Forms.TextBox txtTongSoTinChi;
         private System.Windows.Forms.TextBox txtDiemTrungBinh;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnTinh;
         private System.Windows.Forms.TextBox txtTongSoDiem;
         private System.Windows.Forms.ComboBox cbbTenMonHoc;
+        private System.Windows.Forms.TextBox txtDSMH;
     }
 }
 
