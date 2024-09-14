@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDTH2", "HDTH2.csproj", "{013FDE12-3DBB-4970-B122-A83BEF3A576E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{013FDE12-3DBB-4970-B122-A83BEF3A576E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013FDE12-3DBB-4970-B122-A83BEF3A576E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013FDE12-3DBB-4970-B122-A83BEF3A576E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{013FDE12-3DBB-4970-B122-A83BEF3A576E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84C888EC-4612-4F87-AB90-3495C9E46DCB}
+	EndGlobalSection
+EndGlobal
