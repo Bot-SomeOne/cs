@@ -15,8 +15,7 @@ namespace TH2_Ex2
         public Form1()
         {
             InitializeComponent();
-            this.KeyPreview = true;
-
+            this.init();
         }
 
         /**
@@ -74,5 +73,12 @@ namespace TH2_Ex2
             txtTien.Text = "";
         }
 
+        // Help Init
+        private void init()
+        {
+            this.KeyPreview = true;
+            List<int> listSoLuong = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            comboBoxSoLuong.DataSource = listSoLuong;
+        }
     }
 }
