@@ -42,6 +42,31 @@ namespace TH2_Ex1
         }
 
         /**
+         * Chon diem phu hop voi mon hoc
+         */
+        private void handleChonMonHoc(object sender, EventArgs e)
+        {
+            MonHoc selectedMonHoc = (MonHoc)cbbTenMonHoc.SelectedItem;
+            if (selectedMonHoc == null) {
+                return;
+            }
+            txtSoTinChi.Text = selectedMonHoc.SoTinChi.ToString();
+        }
+
+        /**
+         * Xu li nhap diem
+         */
+        private void diem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra nếu ký tự không phải là số, không phải phím điều khiển (như backspace) và không phải là dấu .
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) &&
+                (e.KeyChar != '.' || ((TextBox)sender).Text.Contains("."))) // Cho phép duy nhất 1 dấu .
+            {
+                e.Handled = true; // Ngăn không cho ký tự không hợp lệ được nhập vào
+            }
+        }
+
+        /**
          * List Helpper
          */
 
@@ -86,5 +111,7 @@ namespace TH2_Ex1
                 Application.Exit();
             }
         }
+
+        
     }
 }

@@ -73,6 +73,7 @@
             this.cbbTenMonHoc.Name = "cbbTenMonHoc";
             this.cbbTenMonHoc.Size = new System.Drawing.Size(397, 27);
             this.cbbTenMonHoc.TabIndex = 5;
+            this.cbbTenMonHoc.SelectedIndexChanged += new System.EventHandler(this.handleChonMonHoc);
             // 
             // btnThemVaoDS
             // 
@@ -89,11 +90,13 @@
             this.txtDiem.Name = "txtDiem";
             this.txtDiem.Size = new System.Drawing.Size(205, 26);
             this.txtDiem.TabIndex = 2;
+            this.txtDiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.diem_KeyPress);
             // 
             // txtSoTinChi
             // 
             this.txtSoTinChi.Location = new System.Drawing.Point(161, 211);
             this.txtSoTinChi.Name = "txtSoTinChi";
+            this.txtSoTinChi.ReadOnly = true;
             this.txtSoTinChi.Size = new System.Drawing.Size(293, 26);
             this.txtSoTinChi.TabIndex = 2;
             // 
