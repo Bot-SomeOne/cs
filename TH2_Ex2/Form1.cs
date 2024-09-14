@@ -29,9 +29,20 @@ namespace TH2_Ex2
             {
                 this.closeApp();
             }
-            
+            // Xu li them moi khi nhan phim Alt + M
+            if (e.Alt && e.KeyCode == Keys.M)
+            {
+                this.clearUp();
+            }
         }
 
+        /**
+         *  Handle btnThemMoi_Click
+         */
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            this.clearUp();
+        }
 
         // Handle btn close app
         private void btnThoat_Click(object sender, EventArgs e)
@@ -52,5 +63,16 @@ namespace TH2_Ex2
                 Application.Exit();
             }
         }
+
+        // Help Clear Up
+        private void clearUp()
+        {
+            txtHoTen.Text = "";
+            txtHoTen.Focus();
+
+            txtGiaDuThuyen.Text = "";
+            txtTien.Text = "";
+        }
+
     }
 }

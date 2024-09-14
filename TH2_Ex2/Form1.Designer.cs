@@ -164,6 +164,7 @@
             this.btnThemMoi.TabIndex = 1;
             this.btnThemMoi.Text = "Them Moi";
             this.btnThemMoi.UseVisualStyleBackColor = true;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // btnThemVaoDS
             // 
