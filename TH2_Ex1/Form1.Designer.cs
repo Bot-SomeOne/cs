@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.txtTenMonHoc = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnThemVaoDS = new System.Windows.Forms.Button();
             this.txtDiem = new System.Windows.Forms.TextBox();
             this.txtSoTinChi = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnTinh = new System.Windows.Forms.Button();
             this.txtTongSoDiem = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtTenMonHoc.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,14 @@
             this.txtTenMonHoc.TabIndex = 0;
             this.txtTenMonHoc.TabStop = false;
             this.txtTenMonHoc.Text = "Thong tin diem sinh vien";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(57, 111);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(397, 27);
+            this.comboBox1.TabIndex = 5;
             // 
             // btnThemVaoDS
             // 
@@ -184,6 +192,7 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoat";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnTinh
             // 
@@ -200,14 +209,6 @@
             this.txtTongSoDiem.Name = "txtTongSoDiem";
             this.txtTongSoDiem.Size = new System.Drawing.Size(100, 26);
             this.txtTongSoDiem.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(57, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(397, 27);
-            this.comboBox1.TabIndex = 5;
             // 
             // Form1
             // 
@@ -228,6 +229,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listenKeyPress);
             this.txtTenMonHoc.ResumeLayout(false);
             this.txtTenMonHoc.PerformLayout();
             this.groupBox2.ResumeLayout(false);
