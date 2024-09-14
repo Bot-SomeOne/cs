@@ -200,6 +200,7 @@
             this.btnTinh.TabIndex = 5;
             this.btnTinh.Text = "Tinh";
             this.btnTinh.UseVisualStyleBackColor = true;
+            this.btnTinh.Click += new System.EventHandler(this.btnTinh_Click);
             // 
             // txtTongSoDiem
             // 

@@ -37,6 +37,11 @@ namespace TH2_Ex1
             {
                 this.helpAddData();
             }
+            // Xu li tinh khi nhan phim Alt + T
+            if (e.Alt && e.KeyCode == Keys.T)
+            {
+                this.helpTinh();
+            }
         }
 
         /**
@@ -80,9 +85,42 @@ namespace TH2_Ex1
             this.helpAddData();
         }
 
+        private void btnTinh_Click(object sender, EventArgs e)
+        {
+            helpTinh();
+        }
+
         /**
          * List Helpper
          */
+
+        /**
+         * Help Tinh
+         */
+        private void helpTinh()
+        {
+            if (this.lstData.Count == 0)
+            {
+                MessageBox.Show("Vui lòng nhập môn học", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int tongSoTinChi = 0;
+            double tongDiem = 0;
+            double diemTB = 0;
+
+            foreach (MonHoc monHoc in this.lstData)
+            {
+                tongSoTinChi += monHoc.SoTinChi;
+                tongDiem += monHoc.Diem;
+            }
+
+            diemTB = tongDiem / this.lstData.Count;
+
+            txtTongSoTinChi.Text = tongSoTinChi.ToString();
+            txtTongSoDiem.Text = tongDiem.ToString();
+            txtDiemTrungBinh.Text = diemTB.ToString();
+        }
 
         /**
          * Help add data
