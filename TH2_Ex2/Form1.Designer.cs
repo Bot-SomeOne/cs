@@ -105,8 +105,10 @@
             this.radioNuaNgay.Size = new System.Drawing.Size(73, 17);
             this.radioNuaNgay.TabIndex = 5;
             this.radioNuaNgay.TabStop = true;
+            this.radioNuaNgay.Tag = "100";
             this.radioNuaNgay.Text = "Nua Ngay";
             this.radioNuaNgay.UseVisualStyleBackColor = true;
+            this.radioNuaNgay.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // radioCaNgay
             // 
@@ -116,8 +118,10 @@
             this.radioCaNgay.Size = new System.Drawing.Size(66, 17);
             this.radioCaNgay.TabIndex = 5;
             this.radioCaNgay.TabStop = true;
+            this.radioCaNgay.Tag = "200";
             this.radioCaNgay.Text = "Ca Ngay";
             this.radioCaNgay.UseVisualStyleBackColor = true;
+            this.radioCaNgay.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // txtGiaDuThuyen
             // 

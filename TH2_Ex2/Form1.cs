@@ -38,6 +38,18 @@ namespace TH2_Ex2
         }
 
         /**
+         * Handle click radio button
+         */
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = (RadioButton)sender;
+            if (radioButton.Checked)
+            {
+                txtGiaDuThuyen.Text = radioButton.Tag.ToString();
+            }
+        }
+
+        /**
          * Handle change selected combobox
          */
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
