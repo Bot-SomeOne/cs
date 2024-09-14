@@ -38,9 +38,26 @@ namespace TH2_Ex2
         }
 
         /**
-         *  Handle btnThemMoi_Click
+         * Handle change selected combobox
          */
-        private void btnThemMoi_Click(object sender, EventArgs e)
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int soLuong = (int)comboBoxSoLuong.SelectedItem;
+            DoUong doUong = (DoUong)comboBoxChonDoUong.SelectedItem;
+            int giaDuThuyen = int.Parse(txtGiaDuThuyen.Text);
+            if (giaDuThuyen == 0)
+            {
+                MessageBox.Show("Vui long chon thoi gian thue", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            double tien = giaDuThuyen + doUong.Gia * soLuong;
+            txtTien.Text = tien.ToString();
+        }
+
+            /**
+             *  Handle btnThemMoi_Click
+             */
+            private void btnThemMoi_Click(object sender, EventArgs e)
         {
             this.clearUp();
         }
