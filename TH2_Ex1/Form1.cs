@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using TH2_Ex1.Models;
 
 namespace TH2_Ex1
 {
     public partial class Form1 : Form
     {
+        // Var
+        private List<MonHoc> lstMonHoc;
+        //
         public Form1()
         {
             InitializeComponent();
+            this.init();
             this.KeyPreview = true;
         }
 
@@ -38,6 +44,38 @@ namespace TH2_Ex1
         /**
          * List Helpper
          */
+
+        // Init
+        private void init()
+        {
+            this.lstMonHoc = new List<MonHoc>
+            {
+                new MonHoc{
+                    TenMonHoc = "Tin hoc dai cuong",
+                    SoTinChi = 2
+                },
+                new MonHoc{
+                    TenMonHoc = "Giai tich F1",
+                    SoTinChi = 3
+                },
+                new MonHoc{
+                    TenMonHoc = "Tieng Anh A0",
+                    SoTinChi = 3
+                },
+                new MonHoc{
+                    TenMonHoc = "Triet hoc Mac - Lenin",
+                    SoTinChi = 2
+                },
+                new MonHoc{
+                    TenMonHoc = "Vat ly F1",
+                    SoTinChi = 3
+                }
+
+            };
+            cbbTenMonHoc.DataSource = this.lstMonHoc;
+            cbbTenMonHoc.DisplayMember = "TenMonHoc"; // Property to display in the ComboBox
+            cbbTenMonHoc.ValueMember = "SoTinChi";    // Underlying value (optional)
+        }
 
         // Helpper Close app
         private void closeApp()

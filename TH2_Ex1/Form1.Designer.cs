@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtTenMonHoc = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbTenMonHoc = new System.Windows.Forms.ComboBox();
             this.btnThemVaoDS = new System.Windows.Forms.Button();
             this.txtDiem = new System.Windows.Forms.TextBox();
             this.txtSoTinChi = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             // 
             // txtTenMonHoc
             // 
-            this.txtTenMonHoc.Controls.Add(this.comboBox1);
+            this.txtTenMonHoc.Controls.Add(this.cbbTenMonHoc);
             this.txtTenMonHoc.Controls.Add(this.btnThemVaoDS);
             this.txtTenMonHoc.Controls.Add(this.txtDiem);
             this.txtTenMonHoc.Controls.Add(this.txtSoTinChi);
@@ -66,13 +66,13 @@
             this.txtTenMonHoc.TabStop = false;
             this.txtTenMonHoc.Text = "Thong tin diem sinh vien";
             // 
-            // comboBox1
+            // cbbTenMonHoc
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(57, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(397, 27);
-            this.comboBox1.TabIndex = 5;
+            this.cbbTenMonHoc.FormattingEnabled = true;
+            this.cbbTenMonHoc.Location = new System.Drawing.Point(57, 111);
+            this.cbbTenMonHoc.Name = "cbbTenMonHoc";
+            this.cbbTenMonHoc.Size = new System.Drawing.Size(397, 27);
+            this.cbbTenMonHoc.TabIndex = 5;
             // 
             // btnThemVaoDS
             // 
@@ -258,7 +258,7 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnTinh;
         private System.Windows.Forms.TextBox txtTongSoDiem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbTenMonHoc;
     }
 }
 
