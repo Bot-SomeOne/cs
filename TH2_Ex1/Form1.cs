@@ -32,6 +32,11 @@ namespace TH2_Ex1
             {
                 this.closeApp();
             }
+            // Xu li them mon hoc khi nhan phim Alt + D
+            if (e.Alt && e.KeyCode == Keys.D)
+            {
+                this.helpAddData();
+            }
         }
 
         /**

@@ -170,6 +170,7 @@
             // 
             this.txtTongSoTinChi.Location = new System.Drawing.Point(677, 377);
             this.txtTongSoTinChi.Name = "txtTongSoTinChi";
+            this.txtTongSoTinChi.ReadOnly = true;
             this.txtTongSoTinChi.Size = new System.Drawing.Size(100, 26);
             this.txtTongSoTinChi.TabIndex = 3;
             // 
@@ -177,6 +178,7 @@
             // 
             this.txtDiemTrungBinh.Location = new System.Drawing.Point(723, 471);
             this.txtDiemTrungBinh.Name = "txtDiemTrungBinh";
+            this.txtDiemTrungBinh.ReadOnly = true;
             this.txtDiemTrungBinh.Size = new System.Drawing.Size(112, 26);
             this.txtDiemTrungBinh.TabIndex = 4;
             // 
@@ -203,6 +205,7 @@
             // 
             this.txtTongSoDiem.Location = new System.Drawing.Point(951, 377);
             this.txtTongSoDiem.Name = "txtTongSoDiem";
+            this.txtTongSoDiem.ReadOnly = true;
             this.txtTongSoDiem.Size = new System.Drawing.Size(100, 26);
             this.txtTongSoDiem.TabIndex = 3;
             // 
@@ -211,6 +214,7 @@
             this.txtDSMH.Location = new System.Drawing.Point(18, 25);
             this.txtDSMH.Multiline = true;
             this.txtDSMH.Name = "txtDSMH";
+            this.txtDSMH.ReadOnly = true;
             this.txtDSMH.Size = new System.Drawing.Size(469, 267);
             this.txtDSMH.TabIndex = 2;
             // 
