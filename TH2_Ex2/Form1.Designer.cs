@@ -127,6 +127,7 @@
             // 
             this.txtGiaDuThuyen.Location = new System.Drawing.Point(101, 129);
             this.txtGiaDuThuyen.Name = "txtGiaDuThuyen";
+            this.txtGiaDuThuyen.ReadOnly = true;
             this.txtGiaDuThuyen.Size = new System.Drawing.Size(139, 20);
             this.txtGiaDuThuyen.TabIndex = 4;
             // 
@@ -157,6 +158,7 @@
             // 
             this.txtTien.Location = new System.Drawing.Point(261, 223);
             this.txtTien.Name = "txtTien";
+            this.txtTien.ReadOnly = true;
             this.txtTien.Size = new System.Drawing.Size(92, 20);
             this.txtTien.TabIndex = 2;
             // 
