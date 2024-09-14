@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//
+using TH2_Ex2.Models;
 
 namespace TH2_Ex2
 {
@@ -71,14 +73,28 @@ namespace TH2_Ex2
 
             txtGiaDuThuyen.Text = "";
             txtTien.Text = "";
+
+            comboBoxChonDoUong.SelectedIndex = 0;
+            comboBoxSoLuong.SelectedIndex = 0;
         }
 
         // Help Init
         private void init()
         {
             this.KeyPreview = true;
+
             List<int> listSoLuong = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             comboBoxSoLuong.DataSource = listSoLuong;
+
+            List<DoUong> listDoUong = new List<DoUong>
+            {
+                new DoUong { TenDoUong = "CoCa cola", Gia = 0.5 },
+                new DoUong { TenDoUong = "Pepsi", Gia = 0.8 },
+                new DoUong { TenDoUong = "Seven up", Gia = 1.0 },
+            };
+            comboBoxChonDoUong.DataSource = listDoUong;
+            comboBoxChonDoUong.DisplayMember = "TenDoUong";
+
         }
     }
 }
