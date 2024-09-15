@@ -182,6 +182,7 @@
             this.btnThemVaoDS.TabIndex = 1;
             this.btnThemVaoDS.Text = "Them Vao DS";
             this.btnThemVaoDS.UseVisualStyleBackColor = true;
+            this.btnThemVaoDS.Click += new System.EventHandler(this.btnThemTour_Click);
             // 
             // label5
             // 

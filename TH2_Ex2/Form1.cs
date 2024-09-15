@@ -14,6 +14,10 @@ namespace TH2_Ex2
 {
     public partial class Form1 : Form
     {
+        // Var
+        private List<Tour> TourList;
+
+        //
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +39,14 @@ namespace TH2_Ex2
             {
                 this.clearUp();
             }
+        }
+
+        /**
+         * Handle btn click them tour
+         */
+        private void btnThemTour_Click(object sender, EventArgs e)
+        {
+            this.themTour();
         }
 
         /**
@@ -76,6 +88,44 @@ namespace TH2_Ex2
          * List Helpper
          */
 
+        // Handle Show data
+        private void showData()
+        {
+            string data = "";
+            foreach (Tour tour in this.TourList)
+            {
+                data += tour.TenKhachHang + " | ";
+                data += tour.ThoiGian + " | ";
+                data += tour.GiaThuyen + " | ";
+                data += "Do uong " + tour.GiaDoUong + "$ | ";
+                data += "Tong " + tour.TongTien + "$";
+                data += Environment.NewLine;
+            }
+
+            txtData.Text = data;
+        }
+
+        // Help Them tua
+        private void themTour()
+        {
+            Tour tour = new Tour();
+            tour.TenKhachHang = txtHoTen.Text;
+            tour.ThoiGian = radioCaNgay.Text;
+            tour.GiaThuyen = double.Parse(txtGiaDuThuyen.Text);
+            tour.GiaDoUong = ((DoUong)comboBoxChonDoUong.SelectedItem).Gia;
+            tour.TongTien = double.Parse(txtTien.Text);
+
+            if (tour.TenKhachHang == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoTen.Focus();
+                return;
+            }
+
+            this.TourList.Add(tour);
+            this.showData();
+        }
+
         // Helper Tinh Tien
         private void tinhTien()
         {
@@ -113,6 +163,8 @@ namespace TH2_Ex2
         // Help Init
         private void init()
         {
+            this.TourList = new List<Tour>();
+
             List<int> listSoLuong = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             comboBoxSoLuong.DataSource = listSoLuong;
 
@@ -124,6 +176,9 @@ namespace TH2_Ex2
             };
             comboBoxChonDoUong.DataSource = listDoUong;
             comboBoxChonDoUong.DisplayMember = "TenDoUong";
+
+
+            txtData.ScrollBars = ScrollBars.Both; // Hoặc ScrollBars.Vertical hoặc ScrollBars.Horizontal
 
             this.KeyPreview = true;
 
