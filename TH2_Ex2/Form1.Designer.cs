@@ -145,6 +145,7 @@
             this.comboBoxSoLuong.Name = "comboBoxSoLuong";
             this.comboBoxSoLuong.Size = new System.Drawing.Size(85, 21);
             this.comboBoxSoLuong.TabIndex = 3;
+            this.comboBoxSoLuong.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // comboBoxChonDoUong
             // 
@@ -153,6 +154,7 @@
             this.comboBoxChonDoUong.Name = "comboBoxChonDoUong";
             this.comboBoxChonDoUong.Size = new System.Drawing.Size(104, 21);
             this.comboBoxChonDoUong.TabIndex = 3;
+            this.comboBoxChonDoUong.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // txtTien
             // 

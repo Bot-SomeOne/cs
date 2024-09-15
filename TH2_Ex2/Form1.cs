@@ -46,6 +46,7 @@ namespace TH2_Ex2
             if (radioButton.Checked)
             {
                 txtGiaDuThuyen.Text = radioButton.Tag.ToString();
+                this.tinhTien();
             }
         }
 
@@ -54,16 +55,7 @@ namespace TH2_Ex2
          */
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int soLuong = (int)comboBoxSoLuong.SelectedItem;
-            DoUong doUong = (DoUong)comboBoxChonDoUong.SelectedItem;
-            int giaDuThuyen = int.Parse(txtGiaDuThuyen.Text);
-            if (giaDuThuyen == 0)
-            {
-                MessageBox.Show("Vui long chon thoi gian thue", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            double tien = giaDuThuyen + doUong.Gia * soLuong;
-            txtTien.Text = tien.ToString();
+           this.tinhTien();
         }
 
          /**
@@ -84,6 +76,16 @@ namespace TH2_Ex2
          * List Helpper
          */
 
+        // Helper Tinh Tien
+        private void tinhTien()
+        {
+            int soLuong = (int)comboBoxSoLuong.SelectedItem;
+            DoUong doUong = (DoUong)comboBoxChonDoUong.SelectedItem;
+            int giaDuThuyen = int.Parse(txtGiaDuThuyen.Text);
+            double tien = giaDuThuyen + doUong.Gia * soLuong;
+            txtTien.Text = tien.ToString();
+        }
+
         // Helpper Close app
         private void closeApp()
         {
@@ -100,22 +102,17 @@ namespace TH2_Ex2
             txtHoTen.Text = "";
             txtHoTen.Focus();
 
-            txtGiaDuThuyen.Text = "";
-            txtTien.Text = "";
-
             comboBoxChonDoUong.SelectedIndex = 0;
             comboBoxSoLuong.SelectedIndex = 0;
 
             radioCaNgay.Checked = true;
+
+            this.tinhTien();
         }
 
         // Help Init
         private void init()
         {
-            this.KeyPreview = true;
-
-            radioCaNgay.Checked = true;
-
             List<int> listSoLuong = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             comboBoxSoLuong.DataSource = listSoLuong;
 
@@ -128,6 +125,9 @@ namespace TH2_Ex2
             comboBoxChonDoUong.DataSource = listDoUong;
             comboBoxChonDoUong.DisplayMember = "TenDoUong";
 
+            this.KeyPreview = true;
+
+            radioCaNgay.Checked = true;
         }
     }
 }
