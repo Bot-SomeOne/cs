@@ -110,7 +110,7 @@ namespace TH2_Ex2
         {
             Tour tour = new Tour();
             tour.TenKhachHang = txtHoTen.Text;
-            tour.ThoiGian = radioCaNgay.Text;
+            tour.ThoiGian = txtGiaDuThuyen.Text == "200" ? "Ca ngay" : "Nua ngay";
             tour.GiaThuyen = double.Parse(txtGiaDuThuyen.Text);
             tour.GiaDoUong = ((DoUong)comboBoxChonDoUong.SelectedItem).Gia;
             tour.TongTien = double.Parse(txtTien.Text);
